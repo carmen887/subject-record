@@ -6,7 +6,10 @@ const mongoose = require('mongoose');
 const app = express();
 
 //Conexion DB
-mongoose.connect('mongodb://localhost/report')
+mongoose.connect('mongodb://localhost/report',{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 .then(db => console.log('DB connected'))
 .catch(err => console.log(err));
 
