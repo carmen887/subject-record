@@ -23,7 +23,7 @@ router.get('/update/:id', async (req, res) =>{
     const ed = await sub.findById(id);
     res.render('update', {
         ed
-    })
+    });
 });
 
 router.post('/edit/:id', async (req, res) => {
