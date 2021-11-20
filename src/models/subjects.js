@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const subSchema = new Schema({
     subject: String,
-    qualification: Int32Array,
+    qualification: String,
 });
 
 module.exports = mongoose.model('subject', subSchema);
