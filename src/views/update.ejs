@@ -1,0 +1,24 @@
+<% include partials/_header %>
+
+<div class="container">
+    <div class="row">
+        <!-- form -->
+<div class="col-md-5 offset-md-3">
+    <div class="card">
+        <div class="class card-body">
+            <form action="/edit/<%= subs._id %>" method="post">
+                <div class="class form-group">
+                    <input type="text" name="sub" placeholder="Modify Subject" class="form-control" value="<%= subs.Subject %>">
+                </div>
+                <div class="class form-group">
+                    <input type="text" name="qua" placeholder="Modify Qualification" class="form-control" value="<%= subs.Qualification %>">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block"> Update </button>
+            </form>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+<% include partials/_footer %>

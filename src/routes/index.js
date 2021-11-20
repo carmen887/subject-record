@@ -18,6 +18,20 @@ router.post('/add', async (req, res) =>{
     res.redirect('/');
 });
 
+router.get('/update/:id', async (req, res) =>{
+    const { id } = req.params;
+    const ed = await sub.findById(id);
+    res.render('update', {
+        ed
+    })
+});
+
+router.post('/edit/:id', async (req, res) => {
+    const { id } = req.params;
+    await sub.update({_id: id}, req.body);
+    res.redirect('/');
+});
+
 router.get('/delete/:id', async (req, res) => {
     const { id } = req.params;
     await sub.remove({_id: id})
